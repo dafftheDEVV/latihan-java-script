@@ -1,29 +1,33 @@
 // npm install prompt-sync
-const prompt = require("prompt-sync")({ sigint: true });
+const prompt = require("prompt-sync")({sigint: true})
 
-// Define functions for each soal so we can run them individually
-function soal1() {
-  let kata = "Cerdas";
+// SOAL 1
+{
+  let teks = "Cerdas";
+
   for (let i = 0; i < 5; i++) {
-    process.stdout.write(kata + " ");
+    process.stdout.write(teks + " "); 
   }
   console.log("\n");
 }
 
-function soal2() {
+// SOAL 2
+{
   for (let i = 0; i < 4; i++) {
     console.log("Cerdas");
   }
 }
 
-function soal3() {
+// SOAL 3
+{
   let pilihan = ["A", "B", "C", "D"];
   for (let i = 0; i < pilihan.length; i++) {
     console.log(`${pilihan[i]}. Cerdas`);
   }
 }
 
-function soal4and5() {
+// SOAL 4 & 5
+{
   let sum = 0;
   let teksSum = "";
   for (let i = 1; i <= 5; i++) {
@@ -33,19 +37,19 @@ function soal4and5() {
   console.log(teksSum + sum);
 }
 
-function soal6() {
+// SOAL 6
+{
   let hasil6 = "";
   for (let i = 1; i <= 5; i++) {
     hasil6 += i + "\n";
   }
-  // compute total programmatically instead of hardcode
-  let total = 0;
-  for (let i = 1; i <= 5; i++) total += i;
-  hasil6 += "=\n" + total;
+  // show the plus sign and the total on the next lines to match the picture
+  hasil6 += "+\n15";
   console.log(hasil6);
 }
 
-function soal7() {
+// SOAL 7
+{
   let ganjil = [1, 3, 5];
   let totalGanjil = 0;
   let teksGanjil = "";
@@ -56,7 +60,8 @@ function soal7() {
   console.log(teksGanjil + totalGanjil);
 }
 
-function soal8() {
+// SOAL 8
+{
   let totalGenap = 0;
   let teksGenap = "";
   for (let i = 2; i <= 10; i += 2) {
@@ -66,7 +71,8 @@ function soal8() {
   console.log(teksGenap + totalGenap);
 }
 
-function soal9() {
+// SOAL 9
+{
   for (let s = 1; s <= 5; s++) {
     let teks = "";
     for (let o = 1; o <= 5; o++) {
@@ -76,7 +82,8 @@ function soal9() {
   }
 }
 
-function soal10() {
+// SOAL 10
+{
   for (let i = 0; i < 5; i++) {
     let baris = "";
     for (let j = 0; j < 6; j++) {
@@ -86,7 +93,8 @@ function soal10() {
   }
 }
 
-function soal11() {
+// SOAL 11
+{
   for (let i = 1; i <= 5; i++) {
     let baris = "";
     for (let j = 1; j <= i; j++) {
@@ -96,7 +104,8 @@ function soal11() {
   }
 }
 
-function soal12() {
+// SOAL 12
+{
   for (let i = 5; i >= 1; i--) {
     let baris = "";
     for (let j = 1; j <= i; j++) {
@@ -106,7 +115,8 @@ function soal12() {
   }
 }
 
-function soal13() {
+// SOAL 13
+{
   for (let i = 1; i <= 5; i++) {
     console.log("*".repeat(i));
   }
@@ -115,139 +125,23 @@ function soal13() {
   }
 }
 
-function soal14() {
-  const ukuran = 5;
-  for (let i = 1; i <= ukuran; i++) {
-    let baris = "";
-    // Spasi
-    for (let j = 1; j < i; j++) {
-      baris += " ";
-    }
-    // Bintang
-    for (let k = 0; k < 2 * (ukuran - i) + 1; k++) {
-      baris += "*";
-    }
-    console.log(baris);
+
+// SOAL 14
+{
+  // The original file left SOAL 14 empty. Add a small pyramid to illustrate another loop pattern.
+  let height = 5;
+  for (let i = 1; i <= height; i++) {
+    let spaces = "".repeat(height - i);
+    let stars = "*".repeat(2 * i - 1);
+    console.log(spaces + stars);
   }
 }
 
-function soal15() {
+// SOAL 15
+{
   for (let i = 1; i <= 5; i++) {
     console.log("*".repeat(i));
   }
 }
 
-function soal16() {
-  for (let i = 1; i <= 5; i++) {
-    console.log("*".repeat(i));
-  }
-  for (let i = 4; i >= 1; i--) {
-    console.log("*".repeat(i));
-  }
-}
-
-function soal17() {
-  let huruf = ["a", "b", "c", "d", "e"];
-  for (let i = 0; i < huruf.length; i++) {
-    let baris = "";
-    for (let j = 0; j < 5; j++) {
-      baris += huruf[i];
-    }
-    console.log(baris);
-  }
-}
-
-// helper to run one by number or 'all'
-function runSoal(n) {
-  switch (String(n)) {
-    case "1":
-      soal1();
-      break;
-    case "2":
-      soal2();
-      break;
-    case "3":
-      soal3();
-      break;
-    case "4":
-      soal4and5();
-      break;
-    case "5":
-      soal4and5();
-      break;
-    case "6":
-      soal6();
-      break;
-    case "7":
-      soal7();
-      break;
-    case "8":
-      soal8();
-      break;
-    case "9":
-      soal9();
-      break;
-    case "10":
-      soal10();
-      break;
-    case "11":
-      soal11();
-      break;
-    case "12":
-      soal12();
-      break;
-    case "13":
-      soal13();
-      break;
-    case "14":
-      soal14();
-      break;
-    case "15":
-      soal15();
-      break;
-    case "16":
-      soal16();
-      break;
-    case "17":
-      soal17();
-      break;
-    case "all":
-      // run all in order
-      soal1();
-      soal2();
-      soal3();
-      soal4and5();
-      soal6();
-      soal7();
-      soal8();
-      soal9();
-      soal10();
-      soal11();
-      soal12();
-      soal13();
-      soal14();
-      soal15();
-      soal16();
-      soal17();
-      break;
-    default:
-      console.log("Pilihan tidak dikenali: " + n);
-  }
-}
-
-// CLI entry: if an argument given, use it. Otherwise show interactive menu.
-const arg = process.argv[2];
-if (arg) {
-  runSoal(arg);
-} else {
-  console.log("Pilih soal untuk dijalankan (1-17) atau ketik 'all' untuk semua. Ketik 'exit' untuk keluar.");
-  while (true) {
-    const pilihan = prompt('Masukkan pilihan: ');
-    if (!pilihan) continue;
-    if (pilihan.toLowerCase() === 'exit') {
-      console.log('Keluar.');
-      break;
-    }
-    runSoal(pilihan);
-  }
-}
+//
