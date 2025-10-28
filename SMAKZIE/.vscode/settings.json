@@ -1,0 +1,51 @@
+{
+  "background.windowBackgrounds": [],
+  "background.editorBackgrounds": [
+    "C:/Ayah/**/*.{png,jpg,jpeg,gif}"
+  ],
+  "background.sidebarBackgrounds": [],
+  "background.panelBackgrounds": [],
+  "background.backgroundAlignment": [
+    "Center Center",
+    "Center Center",
+    "Center Center",
+    "Center Center"
+  ],
+  "background.backgroundAlignmentValue": [
+    "50%",
+    "50%",
+    "50%",
+    "50%"
+  ],
+  "background.backgroundBlur": [
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "background.backgroundOpacity": [
+    0.12,
+    0.12,
+    0.12,
+    0.12
+  ],
+  "background.backgroundRepeat": [
+    "No Repeat",
+    "No Repeat",
+    "No Repeat",
+    "No Repeat"
+  ],
+  "background.backgroundSize": [
+    "Cover",
+    "Cover",
+    "Cover",
+    "Cover"
+  ],
+  "background.backgroundChangeTime": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "background.settingScope": "Workspace"
+}
